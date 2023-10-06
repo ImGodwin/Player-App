@@ -1,19 +1,22 @@
 package entities;
 
-public class App {
+public abstract class App {
 
     protected String title;
-    protected int duration;
+    protected int yearOfRelease;
 
-
-    public App(String title, int duration) {
+    public App(String title, int yearOfRelease) {
         this.title = title;
-        this.duration = duration;
+        this.yearOfRelease = yearOfRelease;
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "App{" +
+                "title='" + title + '\'' +
+                ", yearOfRelease=" + yearOfRelease +
+                '}';
+    }
 
     public String getTitle() {
         return title;
@@ -23,13 +26,13 @@ public class App {
         this.title = title;
     }
 
-    public int getDuration() {
-        return duration;
+    public int getYearOfRelease() {
+        return yearOfRelease;
     }
 
-    public void setDuration(int duration) {
-        this.duration = duration;
+    public void setYearOfRelease(int yearOfRelease) {
+        this.yearOfRelease = yearOfRelease;
     }
 
-
+    public abstract void readDescription();
 }
