@@ -38,13 +38,27 @@ public class MultimediaMain {
                     arr[i] = new Audio(title, duration, year, vol);
                     break;
                 }
+                case "c": {
+                    System.out.println("what is the title of the image");
+                    String title = input.nextLine();
+                    System.out.println("what is the year of release?");
+                    int year = Integer.parseInt(input.nextLine());
+                    System.out.println("How bright is the image?");
+                    int brightnessLevel = Integer.parseInt(input.nextLine());
+                    arr[i] = new Images(title, year, brightnessLevel);
+                    break;
+                }
             }
 
         }
 
-        if(arr[0] instanceof Audio)
+        /*if(arr[0] instanceof Audio)
 
-        ((Audio) arr[0]).increaseVolume();
+        ((Audio) arr[0]).increaseVolume();*/
+
+        if(arr[0] instanceof Images)
+
+            ((Images) arr[0]).show();
 
 
         //System.out.println("add your favorite song: ");
