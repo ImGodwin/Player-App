@@ -12,14 +12,16 @@ public class MultimediaMain {
         Scanner input = new Scanner(System.in);
         Audio audioPlayer = new Audio("Good music", 1995, 13, 8);
        // audioPlayer.readDescription();
-        System.out.println(audioPlayer);
+        //System.out.println(audioPlayer);
 
-        audioPlayer.readDescription();
-        int num = Integer.parseInt(input.nextLine());
+        /*audioPlayer.readDescription();
+        int num = Integer.parseInt(input.nextLine());*/
 
         //audioPlayer.increaseVolume(num);
         App[] arr = new App[5];
 
+        System.out.println("kindly follow the instructions below");
+        /*String  = input.nextLine();*/
 
         for(int i = 0; i<1; i++)
         {
@@ -66,23 +68,23 @@ public class MultimediaMain {
 
         }
 
-        /*if(arr[0] instanceof Audio)
+        if(arr[0] instanceof Audio)
 
-        ((Audio) arr[0]).play();*/
+        ((Audio) arr[0]).play();
 
-     /*   if(arr[0] instanceof Images)
+        /*if(arr[1] instanceof Images)
 
-            ((Images) arr[0]).show();*/
+            ((Images) arr[1]).show();
 
-        if(arr[0] instanceof Video)
+        if(arr[2] instanceof Video)
 
-        ((Video) arr[0]).playVid();
+        ((Video) arr[2]).playVid();*/
 
 
 
         //System.out.println("add your favorite song: ");
         //audioPlayer.decreaseVol(num);
-       // input.close();
+       input.close();
 
 
     }
