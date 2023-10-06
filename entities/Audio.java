@@ -19,7 +19,7 @@ public class Audio extends App {
         this.volume = volume;
     }
 
-    public void increaseVolume()
+    public void play()
     {
 
         String exclamation = "!";

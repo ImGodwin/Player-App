@@ -37,6 +37,19 @@ public class MultimediaMain {
                     int vol = Integer.parseInt(input.nextLine());
                     arr[i] = new Audio(title, duration, year, vol);
                     break;
+                } case "b": {
+                    System.out.println("what is the title of the video?");
+                    String title = input.nextLine();
+                    System.out.println("what is the duration of the song?");
+                    int duration = Integer.parseInt(input.nextLine());
+                    System.out.println("when was the song released?");
+                    int year = Integer.parseInt(input.nextLine());
+                    System.out.println("What is the volume?");
+                    int vol = Integer.parseInt(input.nextLine());
+                    System.out.println("How bright is the image?");
+                    int brightnessLevel = Integer.parseInt(input.nextLine());
+                    arr[i] = new Video(title, year, brightnessLevel, vol, duration);
+                    break;
                 }
                 case "c": {
                     System.out.println("what is the title of the image");
@@ -48,17 +61,23 @@ public class MultimediaMain {
                     arr[i] = new Images(title, year, brightnessLevel);
                     break;
                 }
+
             }
 
         }
 
         /*if(arr[0] instanceof Audio)
 
-        ((Audio) arr[0]).increaseVolume();*/
+        ((Audio) arr[0]).play();*/
 
-        if(arr[0] instanceof Images)
+     /*   if(arr[0] instanceof Images)
 
-            ((Images) arr[0]).show();
+            ((Images) arr[0]).show();*/
+
+        if(arr[0] instanceof Video)
+
+        ((Video) arr[0]).playVid();
+
 
 
         //System.out.println("add your favorite song: ");
